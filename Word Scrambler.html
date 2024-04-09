@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: Word Scrambler</title>
+</head>
+<body>
+    <script>
+        //Task: Create a function that returns a value of a word and scrambles the letter order with Math.random()
+
+        let str = "Javascript";
+        function scramble(val) {
+            let max = val.length;
+            let temp = " "
+            for (let i=0; i<max; i++) {
+                console.log(val.length);
+                let index = Math.floor(Math.random()* val.length);
+                temp += val[index];          
+                console.log(temp);          
+                val = val.substr(0, index) + val.substr(index + 1);         
+                console.log(val); }
+
+                return temp; 
+            }
+            console.log(scramble(str)); 
+    </script>
+</body>
+</html>

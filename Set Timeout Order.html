@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 6: Set Timeout Order</title>
+</head>
+<body>
+    <script>
+        const one = () => console.log("One");
+        const two = () => console.log("Two");
+        const three = () => {
+            console.log("Three")
+            one();
+            two();
+        }
+        const four = () => {
+            console.log ("Four");
+            setTimeout(one, 0);
+            three();
+        }
+        four();
+
+
+    </script>
+</body>
+</html>

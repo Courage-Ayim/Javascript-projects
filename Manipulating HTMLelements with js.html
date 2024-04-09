@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project9: Manipulating HTML Elements With Javascript</title>
+</head>
+<body>
+    <div class="output">     
+        <h1>Hello</h1>     
+        <div>Test</div>     
+        <ul>         
+            <li id="one">One</li>         
+            <li class="red">Two</li>     
+        </ul>     
+        <div>Test</div> 
+    </div>
+
+<!--Javascript Begins-->
+    <script>
+        const output = document.querySelector('.output');
+        const mainList = output.querySelector('ul');
+        mainList.id = 'mainList';
+        console.log(mainList)
+        const ele = document.querySelectorAll('div');
+        for (let x=0; x < ele.length; x++){
+            console.log(ele[x].tagName);
+            ele[x].id = 'id' + (x+1);
+            if (x%2){
+                ele[x].style.color = 'red';
+               }   else{
+                   ele[x].style.color = 'blue'
+            }
+        }
+
+
+        
+
+    </script>
+</body>
+</html>

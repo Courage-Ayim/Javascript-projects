@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulating An Array</title>
+</head>
+<body>
+    <script>
+        const theList = [
+            "Laurence", "Svekis", true, 35, null, undefined
+        ]
+        theList.shift(); //remove first element.
+        theList.pop();  //remove last element.
+        theList.unshift("FIRST"); //add element
+        theList.splice(2,0, "MIDDLE", "hello World")
+        theList.push("LAST")
+        console.log(theList)
+
+    </script>
+</body>
+</html>

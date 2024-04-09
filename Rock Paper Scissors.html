@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Game</title>
+</head>
+<body>
+    <script>
+        const myArr = [
+            "Rock", "Paper", "Scissors"
+        ];
+        let player = prompt ("Player: Enter number 0-2");
+        let computer = prompt ("Computer: Enter number 0-2");
+        player = Number(player);
+        computer = Number(computer);
+        let message = "Player" + myArr[player] + " VS " + "Computer" + myArr[computer];
+        let output;
+        if (player === computer){
+            output = message + " It is a tie";
+        }
+        else if (player > computer){
+            if ( computer == 0 && player == 2){
+                output = message + " Computer wins";
+            }
+            else {
+                output = message + " Player wins";
+            }
+
+        }
+        else {
+            if ( computer == 2 && player == 0){
+                output = message + " Player wins";
+            }
+            else {
+                output = message + " Computer wins";
+            }
+        }
+        console.log (output);
+    </script>
+</body>
+</html>

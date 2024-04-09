@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friend Checker Game</title>
+</head>
+<body>
+    <script>
+        let name = prompt ("input a name");
+        name = String(name);
+        let message;
+        switch(name){
+            case "Ayim":
+            case "Courage":
+            case "Emmy":
+            case "Loana":
+                message = "She's a friend";
+                break;
+            default:
+                message = "Not a friend";
+        }
+        console.log(message);
+    </script>
+</body>
+</html>

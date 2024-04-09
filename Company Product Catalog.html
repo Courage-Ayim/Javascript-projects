@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company product catalog</title>
+</head>
+<body>
+    <script>
+        const list = [ ]
+        const item1 = {
+            name: "car",
+            model: "toyota ",
+            cost: 1000,
+            quantity: 4
+        }
+        const item2 = {
+            name: "house",
+            model: "villa",
+            cost: 1000n,
+            quantity: 1
+        }
+        const item3 = {
+            name: "computer",
+            model: "dell",
+            cost: 150000,
+            quantity: 2
+        }
+        list.push(item1, item2, item3);
+        console.log(list)
+        console.log(list[2].quantity)
+    </script>
+</body>
+</html>

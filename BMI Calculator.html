@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI calculator</title>
+</head>
+<body>
+    <script>
+        // 1 inche is equal 2.54 centimeters.
+        // 2.2046 pounds is equal to 1 kilo.
+        let myHeightInches = 35;
+        let myHeightCentimeters = myHeightInches * 2.54;
+        let myWeightPounds = 50;
+        let myWeightKilos = myWeightPounds * 2.2046;
+        console.log(myHeightCentimeters);
+        console.log(myWeightKilos)
+        let BMI = myWeightKilos / (myHeightCentimeters/100)**2;
+        console.log(BMI);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: Countdown Timer</title>
+</head>
+<body>
+    <script>
+        /*Create code for a countdown timer that can be executed in the console window, 
+        and will show the total milliseconds, days, hours, minutes, and seconds remaining until a target date is reached: */
+
+        const endDate = "7 June 2020"; //target date 
+        function countdown (){
+            const total = Date.parse(endDate) - new Date(); /*Date.parse(endDate) converts the string representation of the date 
+                                                            which is EndDate to a numeric value as a number of milliseconds.*/
+                                                            //new Date() displays the current time as a number of milliseconds  
+            const days = Math.floor(total / (1000 * 60 * 60 * 24)); //   
+            const hrs = Math.floor((total / (1000 * 60 * 60)) % 24); //    
+            const mins = Math.floor((total / 1000 / 60) % 60);   //  
+            const secs = Math.floor((total / 1000) % 60);    //
+             return {        
+                days,        
+                hrs,       
+                mins,         
+                secs     
+                    }; 
+        }
+        function update() {     
+            const temp = countdown();     
+            let output = "";     
+            for (const property in temp) {         
+                output += (`${property}: ${temp[property]} `);     
+            }     
+            console.log(output);     
+            setTimeout(update, 1000); 
+        } 
+        update();
+        
+    </script>
+</body>
+</html>
